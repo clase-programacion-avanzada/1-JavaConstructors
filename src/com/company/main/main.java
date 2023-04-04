@@ -9,26 +9,26 @@ public class Main {
 
 	public static void main(String[] args) {
 		
-		List<Animal> animals = new ArrayList<Animal>();
+		Animal[] animals = new Animal[3];
 		
 		Animal dog = new Animal("Paco", 3);
 		
-		animals.add(dog);
-		
+		animals[0] = dog;
+	
 		Animal cat = new Animal("Amelia", 4);
 		
-		animals.add(cat);
+		animals[1] = cat;
 		
 		Animal nonAdoptedAnimal = new Animal();
+		
+		animals[2] = nonAdoptedAnimal;
 		
 		nonAdoptedAnimal.setName("Pancracio");
 		nonAdoptedAnimal.setAge(1);
 		
-		animals.add(nonAdoptedAnimal);
-		
-		for(int i = 0 ; i < animals.size() ; i++) {
-			Animal auxAnimal = animals.get(i);
-			System.out.println(auxAnimal.toString());
+		for(int i = 0 ; i < animals.length ; i++) {
+			Animal auxAnimal = animals[i];
+			System.out.println(auxAnimal);
 		}
 		
 		for(Animal auxAnimal : animals) {
